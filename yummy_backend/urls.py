@@ -8,5 +8,6 @@ urlpatterns = [
     path('testimonial/' , testimonial),
     path('login/', login),
     path('signup/', signup),
-    path('test/' , test)
+    path('test/' , test),
+    path('', home),
 ]
