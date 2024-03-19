@@ -54,6 +54,6 @@ def signup(request):
 
 @api_view(['GET'])
 def test(request):
-   return Response({})
+   return Response({"hello": " chutiya api chal rahi h "})
    
    
