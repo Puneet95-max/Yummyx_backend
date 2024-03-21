@@ -91,41 +91,41 @@ WSGI_APPLICATION = 'yummy_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-import dj_database_url
-from urllib.parse import urlparse
-
-# Extract database URL from environment variables
-POSTGRES_URL = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
-POSTGRES_PRISMA_URL = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
-POSTGRES_URL_NO_SSL = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech:5432/verceldb"
-POSTGRES_URL_NON_POOLING = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
-POSTGRES_USER = "default"
-POSTGRES_HOST = "ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech"
-POSTGRES_PASSWORD = "zPkiw5afeKE0"
-POSTGRES_DATABASE = "verceldb"
-
-# Define Django database settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': POSTGRES_DATABASE,
-        'USER': POSTGRES_USER,
-        'PASSWORD': POSTGRES_PASSWORD,
-        'HOST': POSTGRES_HOST,
-        'PORT': '5432',
-        'OPTIONS': {
-            # Use this option to set SSL mode
-            'sslmode': 'require'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# import dj_database_url
+# from urllib.parse import urlparse
+
+# Extract database URL from environment variables
+# POSTGRES_URL = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+# POSTGRES_PRISMA_URL = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
+# POSTGRES_URL_NO_SSL = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech:5432/verceldb"
+# POSTGRES_URL_NON_POOLING = "postgres://default:zPkiw5afeKE0@ep-rapid-bonus-a4tgan6u.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+# POSTGRES_USER = "default"
+# POSTGRES_HOST = "ep-rapid-bonus-a4tgan6u-pooler.us-east-1.aws.neon.tech"
+# POSTGRES_PASSWORD = "zPkiw5afeKE0"
+# POSTGRES_DATABASE = "verceldb"
+
+# # Define Django database settings
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': POSTGRES_DATABASE,
+#         'USER': POSTGRES_USER,
+#         'PASSWORD': POSTGRES_PASSWORD,
+#         'HOST': POSTGRES_HOST,
+#         'PORT': '5432',
+#         'OPTIONS': {
+#             # Use this option to set SSL mode
+#             'sslmode': 'require'
+#         }
+#     }
+# }
 
 
 # Password validation
